@@ -12,10 +12,6 @@
 
 <p><%= image_tag @post.image_url %></p>
 
-<%= form_for @comment, url: post_comments_path(@post, @comment) do |f| %>
-name:<%= f.text_field :name %><br>
-comment:<%= f.text_area :comment %><br>
-<%= f.submit %>
-<% end %>
+
 <%= link_to 'Edit', edit_post_path(@post) %> 
 <%= link_to 'Back', posts_path %>
