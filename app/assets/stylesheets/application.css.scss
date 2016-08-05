@@ -18,8 +18,9 @@
 body { padding-top: 60px; text-align:center; margin-right:20px; background-color: red;}
 h1 {font-size: 80px; color: white; font-weight: bold;}
 table { margin-right: auto; margin-left: auto; margin-top: 50px;}
-td{ padding-right: 20px; padding-top: 30px;}
-th{ margin-left: auto; margin-right: auto;}
+/*td{ padding-right: 20px; padding-top: 30px;}
+th{ margin-left: auto; margin-right: auto;}*/
+th{text-align: center;}
 .field{ text-align: center; }
 
 @import "bootswatch/cosmo/bootswatch";
