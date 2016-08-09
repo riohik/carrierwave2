@@ -29,6 +29,7 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'kaminari'
 gem 'normalize-rails'
+gem 'react-rails','~> 1.7.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
