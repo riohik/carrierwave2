@@ -30,6 +30,7 @@ gem 'bootswatch-rails'
 gem 'kaminari'
 gem 'normalize-rails'
 gem 'react-rails','~> 1.7.0'
+gem 'execjs'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
