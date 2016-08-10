@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @post.name
+%p
+  %strong Comment:
+  = @post.comment
+%p= image_tag @post.image_url
+%hr/
+%h2 コメント一覧
+- if @post.comments.empty?
+  まだコメントは、ありません
+- else
+  - @post.comments.each_with_index do |comment,index|
+    %div
+      %h3= 1 + index
+      %p
+        = comment.name
+      %p
+        = comment.content
+%hr/
+%h2 新規コメント投稿
+= render 'comments/form'
+= link_to 'Edit', edit_post_path(@post)
+= link_to 'Back', posts_path
