@@ -29,6 +29,8 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'kaminari'
 gem 'normalize-rails'
+gem 'acts_as_votable'
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -12,7 +12,17 @@
 
 <p><%= image_tag @post.image_url %></p>
 
-
+<%= link_to like_post_path(@post), method: :put do%>
+いいね！
+<% end %>
+<br>
+<%= @post.get_likes.size %>
+<br>
+<%= link_to dislike_post_path(@post), method: :put do%>
+良くないね！
+<% end %>
+<br>
+<%= @post.get_dislikes.size %>
 <hr>
 <h2>コメント一覧</h2>
 

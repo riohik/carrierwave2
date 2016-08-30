@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :dislike]
 
   # GET /posts
   # GET /posts.json
@@ -7,6 +7,19 @@ class PostsController < ApplicationController
     @posts = Post.page(params[:page])
   end
 
+  def like
+    @post = Post.find(params[:id])
+    @post.liked_by current_user
+    redirect_to @post, notice: "you like this!"
+  end
+  
+  def dislike
+    @post = Post.find(params[:id])
+    @post.disliked_by current_user
+    redirect_to @post, notice: "you dislike this"
+  end
+  
+  
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -74,4 +87,5 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:name, :comment, :image)
     end
+    
 end
