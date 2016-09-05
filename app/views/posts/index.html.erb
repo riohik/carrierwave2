@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1>掲示板テスト</h1>
 
 
 <table align="center" border="3" width="100%" style="table-layout: fixed;" >
@@ -9,19 +9,23 @@
       <th>ID</th>
       <th>Name</th>
       <th>Comment</th>
-      <th width ="300">Image</th>
+      <th width ="200">Image</th>
+      <th>Like</th>
+      <th>Dislike</th>
       <th colspan ="3">&nbsp;</th>
       <!--<th colspan="6"> </th>-->
     </tr>
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
+    <% @posts.each_with_index do |post,index| %>
       <tr>
-        <td><%= post.id %></td>
+        <td><%= 1 + index %></td>
         <td><%= post.name %></td>
         <td><%= post.comment %></td>
-        <td width ="300"><%= image_tag post.image_url(:thumb) %></td>
+        <td width ="200"><%= image_tag post.image_url(:thumb) %></td>
+        <td><%= post.get_likes.size %></td>
+        <td><%= post.get_dislikes.size %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -31,6 +31,10 @@ gem 'kaminari'
 gem 'normalize-rails'
 gem 'acts_as_votable'
 gem 'devise'
+gem 'ransack'
+gem 'jquery-datatables-rails'
+gem 'rails_admin'
+gem 'cancancan'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
